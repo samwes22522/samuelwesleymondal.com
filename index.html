@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samuel Wesley Mondal</title>
+<style>
+  :root {
+    --bg: #fbfaf8;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #b8563f;
+    --line: #e3e0da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131313;
+      --fg: #f0eeea;
+      --muted: #9a958d;
+      --accent: #e08a6e;
+      --line: #2c2c2c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: ui-sans-serif, -apple-system, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 32px 20px;
+    line-height: 1.6;
+  }
+  main { max-width: 560px; width: 100%; }
+  .tag {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 5px 12px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: clamp(2.2rem, 7vw, 3.4rem);
+    line-height: 1.1;
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+  p { color: var(--muted); font-size: 1.05rem; margin: 0 0 12px; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+  footer { font-size: .85rem; color: var(--muted); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: .85em;
+    background: var(--line);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <span class="tag">Hello, world</span>
+  <h1>Samuel Wesley&nbsp;Mondal</h1>
+  <p>This site is live. The domain, the hosting pipeline, and the HTTPS certificate all work.</p>
+  <p>The real portfolio goes here next.</p>
+  <hr>
+  <footer>
+    Served from <code>samuelwesleymondal.com</code> &middot; Cloudflare Pages
+  </footer>
+</main>
+</body>
+</html>
