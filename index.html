@@ -1,79 +1,1151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IE" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Samuel Wesley Mondal</title>
-<style>
-  :root {
-    --bg: #fbfaf8;
-    --fg: #1a1a1a;
-    --muted: #6b6b6b;
-    --accent: #b8563f;
-    --line: #e3e0da;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #131313;
-      --fg: #f0eeea;
-      --muted: #9a958d;
-      --accent: #e08a6e;
-      --line: #2c2c2c;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font-family: ui-sans-serif, -apple-system, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    padding: 32px 20px;
-    line-height: 1.6;
-  }
-  main { max-width: 560px; width: 100%; }
-  .tag {
-    display: inline-block;
-    font-size: 12px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 5px 12px;
-    margin-bottom: 28px;
-  }
-  h1 {
-    font-size: clamp(2.2rem, 7vw, 3.4rem);
-    line-height: 1.1;
-    margin: 0 0 16px;
-    letter-spacing: -0.02em;
-    font-weight: 600;
-  }
-  p { color: var(--muted); font-size: 1.05rem; margin: 0 0 12px; }
-  hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
-  footer { font-size: .85rem; color: var(--muted); }
-  code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: .85em;
-    background: var(--line);
-    padding: 2px 6px;
-    border-radius: 4px;
-  }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Samuel Wesley Mondal — Mechanical Engineer · Simulation-Driven Design</title>
+<meta name="description" content="Mechanical engineer in Dublin working between simulation and hardware: wind energy aerodynamics, UAV propulsion and functional 3D printing. MEng Simulation-Driven Design, DCU. Open to internships and placements.">
+<meta name="author" content="Samuel Wesley Mondal">
+<link rel="canonical" href="https://samuelwesleymondal.com/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Samuel Wesley Mondal">
+<meta property="og:title" content="Samuel Wesley Mondal — Mechanical Engineer">
+<meta property="og:description" content="I simulate it, then I build it — and find out whether the simulation was right. Wind energy, UAV propulsion, functional 3D printing.">
+<meta property="og:url" content="https://samuelwesleymondal.com/">
+<meta property="og:image" content="https://samuelwesleymondal.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Samuel Wesley Mondal — streamlines flowing around an aerofoil">
+<meta property="profile:first_name" content="Samuel Wesley">
+<meta property="profile:last_name" content="Mondal">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script>
+  document.documentElement.classList.add('js');
+  try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/flow.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Samuel Wesley Mondal",
+  "jobTitle": "Mechanical Engineer",
+  "url": "https://samuelwesleymondal.com/",
+  "image": "https://samuelwesleymondal.com/images/portrait-800.jpg",
+  "email": "mailto:samuelwesley.mondal2@mail.dcu.ie",
+  "sameAs": ["https://www.linkedin.com/in/samuel-wesleymondal"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Dublin", "addressCountry": "IE" },
+  "affiliation": { "@type": "CollegeOrUniversity", "name": "Dublin City University" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Loyola-ICAM College of Engineering and Technology" },
+  "knowsAbout": ["Simulation-driven design", "Aerodynamics", "Wind energy", "UAV propulsion", "Additive manufacturing", "SOLIDWORKS"]
+}
+</script>
 </head>
 <body>
-<main>
-  <span class="tag">Hello, world</span>
-  <h1>Samuel Wesley&nbsp;Mondal</h1>
-  <p>This site is live. The domain, the hosting pipeline, and the HTTPS certificate all work.</p>
-  <p>The real portfolio goes here next.</p>
-  <hr>
-  <footer>
-    Served from <code>samuelwesleymondal.com</code> &middot; Cloudflare Pages
-  </footer>
+
+<!-- ================= ICON SPRITE ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.4 8.65 22 11 22 14.2V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21h-4z"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.6-1.5 1.8-2.2 3-2.2s2.4.7 3 2.2M14 10h4M14 13h3"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></symbol>
+    <symbol id="i-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m9 14.5-1.5 6.5 4.5-2.5 4.5 2.5-1.5-6.5"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 5v14M15 5v14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 5l12 7-12 7z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-hash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 9h14M5 15h14M10 4 8 20M16 4l-2 16"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h7"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 32 32"><path d="M3 10.5C10 7.6 18.5 7 29 10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".45"/><path d="M4.5 17.4C6.8 13.4 12.2 12 18.3 12.6 23.4 13.1 27.2 15 29.5 17.3 25 17.9 19.4 18.6 13.7 19.2 9.2 19.6 6 19 4.5 17.4Z" fill="currentColor"/><path d="M3 24.2C11 23.4 20 23.6 29 22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".45"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Samuel Wesley Mondal — back to top">
+      <svg class="brand-mark" aria-hidden="true" style="color:var(--accent)"><use href="#i-mark"/></svg>
+      <span>Samuel Wesley Mondal<b>.</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#education">Education</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="search-btn" type="button" data-palette-open aria-label="Search the site and quick actions" aria-keyshortcuts="Control+K Meta+K /">
+        <svg aria-hidden="true"><use href="#i-search"/></svg><span>Search</span><kbd class="kbd" data-mod>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme">
+        <svg class="theme-ico-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="theme-ico-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+      <a class="btn btn-sm primary nav-cta" href="#contact">Contact</a>
+      <button class="icon-btn menu-btn" type="button" data-menu-open aria-label="Open menu" aria-haspopup="dialog" aria-controls="menu">
+        <svg aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top" aria-labelledby="hero-name" data-title="Home" data-keywords="top hero start">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="idcard">
+        <img src="images/portrait-avatar.jpg" width="160" height="160" alt="Portrait of Samuel Wesley Mondal">
+        <div>
+          <p class="idcard-role">Mechanical Engineer</p>
+          <p class="mono">Dublin, Ireland · MEng, DCU</p>
+        </div>
+      </div>
+      <p class="status"><span class="dot" aria-hidden="true"></span>Open to internships &amp; placements</p>
+      <h1 class="name" id="hero-name">Samuel Wesley <span>Mondal</span></h1>
+      <p class="hero-lede">I simulate it, then I build it — and find out whether the simulation was <em>right</em>.</p>
+      <p class="hero-sub">MEng in Simulation-Driven Design at Dublin City University. Wind-energy aerodynamics, UAV propulsion and functional 3D printing — and I founded and captained a 20-person drone team through national competitions.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#work">Selected work <svg aria-hidden="true"><use href="#i-down"/></svg></a>
+        <a class="btn" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="cv.html"><svg aria-hidden="true"><use href="#i-doc"/></svg>Web CV</a>
+      </div>
+    </div>
+
+    <div class="hero-field" aria-hidden="true"><canvas id="flow"></canvas></div>
+
+    <aside class="hud" id="hud" aria-labelledby="hud-title">
+      <div class="hud-head">
+        <p class="mono" id="hud-title"><span class="live" aria-hidden="true"></span>Live · potential flow</p>
+        <div class="hud-tools">
+          <div class="seg" role="group" aria-label="Visualisation">
+            <button type="button" data-flow-mode="particles" aria-pressed="true">Flow</button>
+            <button type="button" data-flow-mode="lines" aria-pressed="false">Lines</button>
+          </div>
+          <button class="icon-btn sm" type="button" data-flow-toggle aria-label="Pause animation">
+            <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+          </button>
+        </div>
+      </div>
+      <label class="hud-row" for="aoa"><span class="mono">Angle of attack <span class="sym">α</span></span><output id="aoa-out" for="aoa">6.0°</output></label>
+      <input type="range" id="aoa" min="-4" max="16" step="0.5" value="6" aria-describedby="hud-note">
+      <dl class="hud-read">
+        <div><dt>C<sub>L</sub></dt><dd id="cl-out">1.18</dd></div>
+        <div><dt>C<sub>p,min</sub></dt><dd id="cp-out">−2.1</dd></div>
+        <div><dt>C<sub>D</sub></dt><dd>0.00*</dd></div>
+      </dl>
+      <svg class="cp-plot" id="cp-plot" viewBox="0 0 300 96" aria-hidden="true">
+        <path class="ax" d="M28 4V80H298"/>
+        <path class="zero" id="cp-zero" d="M28 62H298"/>
+        <path class="lo" id="cp-lo" d=""/>
+        <path class="up" id="cp-up" d=""/>
+        <text x="0" y="10" id="cp-top">4</text>
+        <text x="0" y="65" id="cp-zero-t">0</text>
+        <text x="28" y="94">0</text>
+        <text x="244" y="94">x/c → 1</text>
+        <text x="36" y="12">−Cp</text>
+      </svg>
+      <p class="cp-legend"><span><i></i>Suction side</span><span><i class="lo"></i>Pressure side</span></p>
+      <p class="hud-note" id="hud-note" aria-live="polite">*Inviscid model: exactly zero drag (d'Alembert) and it can never stall — two reasons every model needs a test.</p>
+    </aside>
+  </div>
+  <a class="scroll-cue" href="#proof" aria-label="Scroll to highlights"><i></i>Scroll</a>
+</section>
+
+<!-- ================= PROOF STRIP ================= -->
+<section class="proof" id="proof" aria-label="Highlights">
+  <div class="wrap">
+    <ul class="proof-list">
+      <li class="rv"><strong>No.<em>&nbsp;2</em></strong><span>National rank, twice — CAM (2024) and 3D printing (2023), SAEISS NLSC</span></li>
+      <li class="rv" style="--d:1"><strong><em>1st</em></strong><span>Best Payload Mechanism Design — ADDC 2025</span></li>
+      <li class="rv" style="--d:2"><strong>20</strong><span>Engineers in the UAV team I founded and captained</span></li>
+      <li class="rv" style="--d:3"><strong>First Class</strong><span>BE Mechanical Engineering, LICET — 2025</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 01 APPROACH ================= -->
+<section class="sec" id="approach" aria-labelledby="approach-h" data-title="How I work" data-keywords="approach method simulate build validate loop">
+  <div class="wrap">
+    <header class="sec-head rv"><span class="num">01</span><h2 id="approach-h">How I work</h2><span class="tail">Simulate → Build → Validate</span></header>
+    <p class="sec-intro rv">Every project on this page runs the same loop. The interesting engineering is in the last step — the gap between what the model promised and what the hardware actually did.</p>
+
+    <ol class="loop rv">
+      <li class="loop-step">
+        <p class="step-k">01 — Simulate</p>
+        <h3>Model it first</h3>
+        <p>Work out the aerodynamic, structural or electrical behaviour before anything is cut, printed or wired. Cheap iterations happen here.</p>
+        <p class="mono evidence-k">Where I've done it</p>
+        <ul class="evidence">
+          <li><a href="#case-vawt" data-case="vawt">VAWT rotor analysis &amp; optimisation<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="#case-propulsion" data-case="propulsion">Motor &amp; battery-pack sizing at Avironix<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="#education">MEng thesis — aerofoil under varying wind loads<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="#p-ekart">E-Kart powertrain calculations<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        </ul>
+      </li>
+      <li class="loop-step">
+        <p class="step-k">02 — Build</p>
+        <h3>Put it in your hands</h3>
+        <p>CAD to physical part: additive manufacturing, fabrication, wiring, assembly. A design that can't be built isn't a design yet.</p>
+        <p class="mono evidence-k">Where I've done it</p>
+        <ul class="evidence">
+          <li><a href="#case-propulsion" data-case="propulsion">Propulsion test rig — designed &amp; fabricated<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="#case-falcon" data-case="falcon">Falcon 1–3 autonomous multirotors<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="#case-xtrude" data-case="xtrude">Functional parts at XTRUDE3D<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="#p-baja">Baja ATV frame fabrication &amp; wiring<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        </ul>
+      </li>
+      <li class="loop-step">
+        <p class="step-k">03 — Validate</p>
+        <h3>Find out where it lied</h3>
+        <p>Test rigs, wind tunnels, instrumented flights. Measure the real thing and compare it honestly with the prediction.</p>
+        <p class="mono evidence-k">Where I've done it</p>
+        <ul class="evidence">
+          <li><a href="#case-vawt" data-case="vawt">Wind-tunnel testing against prediction<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="#case-propulsion" data-case="propulsion">Bench-testing propulsion on the rig<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="#case-falcon" data-case="falcon">Calibration, PID tuning &amp; test flights<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        </ul>
+      </li>
+    </ol>
+    <div class="loop-return rv" aria-hidden="true"><span>Iterate — feed the test back into the model</span></div>
+  </div>
+</section>
+
+<!-- ================= 02 SELECTED WORK ================= -->
+<section class="sec" id="work" aria-labelledby="work-h" data-title="Selected work" data-keywords="case studies portfolio featured">
+  <div class="wrap">
+    <header class="sec-head rv"><span class="num">02</span><h2 id="work-h">Selected work</h2><span class="tail">4 case studies</span></header>
+
+    <div class="work-list">
+
+      <!-- VAWT -->
+      <article class="work-card rv" id="w-vawt">
+        <div class="work-media visual">
+          <span class="work-no">01</span>
+          <svg class="dia" viewBox="0 0 480 360" role="img" aria-label="Schematic of an H-type Darrieus rotor seen from above: three straight blades on struts turning about a vertical shaft in a horizontal wind.">
+            <g class="ln-2" stroke-width="1.2" stroke-linecap="round" opacity=".7">
+              <path d="M14 116h62M68 110l8 6-8 6"/><path d="M14 156h62M68 150l8 6-8 6"/>
+              <path d="M14 196h62M68 190l8 6-8 6"/><path d="M14 236h62M68 230l8 6-8 6"/>
+            </g>
+            <text x="14" y="96">U∞</text>
+            <circle cx="280" cy="180" r="118" class="ln" stroke-dasharray="3 6"/>
+            <g class="spin">
+              <circle cx="280" cy="180" r="140" fill="none"/>
+              <g><path class="ln-2" d="M280 180V66"/><path class="blade" transform="translate(280 62)" d="M-22 0C-18-5.5-6-6 8-4.5 14-3.6 19-1.6 22 0 19 1.6 14 3.6 8 4.5-6 6-18 5.5-22 0Z"/></g>
+              <g transform="rotate(120 280 180)"><path class="ln-2" d="M280 180V66"/><path class="blade" transform="translate(280 62)" d="M-22 0C-18-5.5-6-6 8-4.5 14-3.6 19-1.6 22 0 19 1.6 14 3.6 8 4.5-6 6-18 5.5-22 0Z"/></g>
+              <g transform="rotate(240 280 180)"><path class="ln-2" d="M280 180V66"/><path class="blade" transform="translate(280 62)" d="M-22 0C-18-5.5-6-6 8-4.5 14-3.6 19-1.6 22 0 19 1.6 14 3.6 8 4.5-6 6-18 5.5-22 0Z"/></g>
+            </g>
+            <circle cx="280" cy="180" r="8" class="acc" stroke-width="1.6" style="fill:var(--bg-2)"/>
+            <path class="acc" stroke-width="1.3" d="M196 52A140 140 0 0 0 150 118"/>
+            <path class="acc" stroke-width="1.3" d="M145 108l5 11 8-9"/>
+            <text x="150" y="80" class="t-acc">ω</text>
+            <path class="ln" d="M280 180L363 263" stroke-dasharray="2 4"/>
+            <text x="330" y="236">R</text>
+            <text x="300" y="340" class="t-fg">λ = ωR / U∞</text>
+          </svg>
+        </div>
+        <div class="work-body">
+          <p class="meta-row"><span class="kind">Wind energy</span><span class="period">Jan – Apr 2026</span></p>
+          <h3><a href="#case-vawt" data-case="vawt">H-type Darrieus vertical-axis wind turbine</a></h3>
+          <p>Designed, analysed and optimised a straight-bladed Darrieus rotor, then took it into a wind tunnel. Two objectives: maximise power output under varying loads, and minimise the deviation between predicted and measured performance.</p>
+          <dl class="mini-facts">
+            <div><dt>Scope</dt><dd>Design · analysis · optimisation · test</dd></div>
+            <div><dt>Validation</dt><dd>Wind-tunnel experiments</dd></div>
+          </dl>
+          <ul class="stages" aria-label="Loop coverage: simulate, build, validate"><li class="on">Simulate</li><li class="on">Build</li><li class="on">Validate</li></ul>
+          <div class="work-foot">
+            <a class="btn" href="#case-vawt" data-case="vawt">Read case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <ul class="tags"><li>Aerodynamics</li><li>Wind tunnel</li><li>Optimisation</li></ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Propulsion test stand -->
+      <article class="work-card rv" id="w-propulsion">
+        <div class="work-media visual">
+          <span class="work-no">02</span>
+          <svg class="dia" viewBox="0 0 480 360" role="img" aria-label="Method diagram: requirement, then motor, propeller and battery sizing, then the test stand, then comparing measured against predicted, with a loop back to sizing.">
+            <g>
+              <rect class="box" x="90" y="22" width="270" height="56" rx="8"/>
+              <text x="108" y="45" class="t-acc">01  REQUIREMENT</text><text x="108" y="64">payload · endurance · mass</text>
+              <rect class="box" x="90" y="108" width="270" height="56" rx="8"/>
+              <text x="108" y="131" class="t-acc">02  SIZE</text><text x="108" y="150">motor · propeller · battery pack</text>
+              <rect class="box-acc" x="90" y="194" width="270" height="56" rx="8"/>
+              <text x="108" y="217" class="t-acc">03  TEST STAND</text><text x="108" y="236" class="t-fg">designed · analysed · fabricated</text>
+              <rect class="box" x="90" y="280" width="270" height="56" rx="8"/>
+              <text x="108" y="303" class="t-acc">04  COMPARE</text><text x="108" y="322">measured vs predicted</text>
+            </g>
+            <g class="ln-2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M225 78v26M220 98l5 6 5-6"/><path d="M225 164v26M220 184l5 6 5-6"/><path d="M225 250v26M220 270l5 6 5-6"/>
+            </g>
+            <g class="acc" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M360 308h44V136h-38"/><path d="M372 130l-7 6 7 6"/>
+            </g>
+            <text x="412" y="230" class="t-acc" transform="rotate(90 412 230)" text-anchor="middle">REVISE</text>
+          </svg>
+        </div>
+        <div class="work-body">
+          <p class="meta-row"><span class="kind">UAV propulsion</span><span class="period">Jul 2024 – Apr 2025</span></p>
+          <h3><a href="#case-propulsion" data-case="propulsion">Hybrid UAV propulsion test stand</a></h3>
+          <p>At Avironix Drones I sized motors and battery packs for different UAVs — then designed, analysed, fabricated and tested a propulsion test rig to check those choices on the bench. It became my BE thesis.</p>
+          <dl class="mini-facts">
+            <div><dt>Role</dt><dd>Engineering intern, Avironix Drones</dd></div>
+            <div><dt>Thesis</dt><dd>Hybrid UAV Propulsion System Test Stand</dd></div>
+          </dl>
+          <ul class="stages" aria-label="Loop coverage: simulate, build, validate"><li class="on">Simulate</li><li class="on">Build</li><li class="on">Validate</li></ul>
+          <div class="work-foot">
+            <a class="btn" href="#case-propulsion" data-case="propulsion">Read case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <ul class="tags"><li>Propulsion</li><li>Battery sizing</li><li>Test rig</li></ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Team Delta / Falcon -->
+      <article class="work-card rv" id="w-falcon">
+        <div class="work-media">
+          <span class="work-no on-img">03</span>
+          <img loading="lazy" src="images/uav-team-800.jpg" srcset="images/uav-team-800.jpg 800w, images/uav-team-1600.jpg 1600w" sizes="(max-width:900px) 92vw, 48vw" width="800" height="1067" alt="Team Delta members seated on steps with their multirotor drone" style="object-position:50% 70%">
+          <p class="caption">Turbonites Team Delta — UAV</p>
+        </div>
+        <div class="work-body">
+          <p class="meta-row"><span class="kind">Autonomous UAVs</span><span class="period">Mar 2023 – Apr 2025</span></p>
+          <h3><a href="#case-falcon" data-case="falcon">Team Delta &amp; the Falcon multirotors</a></h3>
+          <p>Founded and captained Turbonites Team Delta, an interdepartmental UAV team of 20. We designed mission-specific autonomous multirotors for AeroTHON and ADDC — payload drops, computer vision, long endurance.</p>
+          <dl class="mini-facts">
+            <div><dt>Role</dt><dd>Founder &amp; captain</dd></div>
+            <div><dt>Result</dt><dd>2nd, Best Design Report — ADDC 2024</dd></div>
+          </dl>
+          <ul class="stages" aria-label="Loop coverage: simulate, build, validate"><li class="on">Simulate</li><li class="on">Build</li><li class="on">Validate</li></ul>
+          <div class="work-foot">
+            <a class="btn" href="#case-falcon" data-case="falcon">Read case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <ul class="tags"><li>Leadership</li><li>PID tuning</li><li>Mission planning</li></ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- XTRUDE3D -->
+      <article class="work-card rv" id="w-xtrude">
+        <div class="work-media">
+          <span class="work-no on-img">04</span>
+          <img loading="lazy" src="images/print-cowling-800.jpg" srcset="images/print-cowling-800.jpg 800w, images/print-cowling-1600.jpg 1600w" sizes="(max-width:900px) 92vw, 48vw" width="800" height="1062" alt="Large black 3D-printed cowling held above the printer bed">
+          <p class="caption">Large-format functional print</p>
+        </div>
+        <div class="work-body">
+          <p class="meta-row"><span class="kind">Additive manufacturing</span><span class="period">May 2024 – present</span></p>
+          <h3><a href="#case-xtrude" data-case="xtrude">XTRUDE3D — functional 3D printing</a></h3>
+          <p>A startup I founded and run, supplying functional 3D printing and prototyping to industrial and engineering projects — parts that carry load and fit an assembly, not display pieces.</p>
+          <dl class="mini-facts">
+            <div><dt>Role</dt><dd>Founder &amp; owner</dd></div>
+            <div><dt>Credentials</dt><dd>National Rank 2 — 3D printing &amp; CAM</dd></div>
+          </dl>
+          <ul class="stages" aria-label="Loop coverage: build"><li>Simulate</li><li class="on">Build</li><li>Validate</li></ul>
+          <div class="work-foot">
+            <a class="btn" href="#case-xtrude" data-case="xtrude">Read case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <ul class="tags"><li>DfAM</li><li>FDM</li><li>Prototyping</li></ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 PROJECT INDEX ================= -->
+<section class="sec" id="projects" aria-labelledby="projects-h" data-title="Project index" data-keywords="all projects archive filter robotics electronics vehicles">
+  <div class="wrap">
+    <header class="sec-head rv"><span class="num">03</span><h2 id="projects-h">Project index</h2><span class="tail">Filter by discipline</span></header>
+
+    <div class="proj-bar rv">
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">All <span class="n"></span></button>
+        <button class="chip" type="button" data-filter="aero" aria-pressed="false">Aero &amp; UAV <span class="n"></span></button>
+        <button class="chip" type="button" data-filter="robotics" aria-pressed="false">Robotics <span class="n"></span></button>
+        <button class="chip" type="button" data-filter="vehicles" aria-pressed="false">Vehicles <span class="n"></span></button>
+        <button class="chip" type="button" data-filter="electronics" aria-pressed="false">Electronics <span class="n"></span></button>
+        <button class="chip" type="button" data-filter="making" aria-pressed="false">Making <span class="n"></span></button>
+        <button class="chip" type="button" data-filter="award" aria-pressed="false">Award-winning <span class="n"></span></button>
+      </div>
+      <div class="proj-tools">
+        <p class="mono" id="proj-count" aria-live="polite"></p>
+        <button class="chip" type="button" id="proj-sort" aria-label="Sort order: newest first">Newest first</button>
+      </div>
+    </div>
+
+    <!-- Each card: data-cat = filter keys (space-separated), data-start = start date as a decimal year (for sorting). -->
+    <ul class="proj-grid" id="proj-grid">
+      <li class="proj featured rv" id="p-vawt" data-cat="aero" data-start="2026.0">
+        <p class="proj-top"><span>2026</span><span class="cat">Aero &amp; energy</span></p>
+        <h3>H-type Darrieus VAWT</h3>
+        <p>Straight-bladed wind turbine, designed and optimised for power output, then validated in a wind tunnel against its predicted performance.</p>
+        <p class="ctx"><svg aria-hidden="true"><use href="#i-flag"/></svg>Wind-tunnel validation</p>
+        <button class="proj-open" type="button" data-case="vawt">Case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </li>
+      <li class="proj featured rv" id="p-propulsion" data-cat="aero making" data-start="2024.5">
+        <p class="proj-top"><span>2024–25</span><span class="cat">UAV propulsion</span></p>
+        <h3>Hybrid UAV propulsion test stand</h3>
+        <p>Motor and battery-pack sizing for different UAVs, checked on a test rig I designed, analysed and fabricated. BE thesis.</p>
+        <p class="ctx"><svg aria-hidden="true"><use href="#i-flag"/></svg>Avironix Drones · internship</p>
+        <button class="proj-open" type="button" data-case="propulsion">Case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </li>
+      <li class="proj featured rv" id="p-xtrude" data-cat="making" data-start="2024.33">
+        <p class="proj-top"><span>2024–now</span><span class="cat">Manufacturing</span></p>
+        <h3>XTRUDE3D</h3>
+        <p>Functional 3D printing and prototyping service for industrial and engineering projects.</p>
+        <p class="ctx"><svg aria-hidden="true"><use href="#i-flag"/></svg>Founder &amp; owner</p>
+        <button class="proj-open" type="button" data-case="xtrude">Case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </li>
+      <li class="proj rv" id="p-ekart" data-cat="vehicles" data-start="2024.25">
+        <p class="proj-top"><span>2024–25</span><span class="cat">Vehicles</span></p>
+        <h3>E-Kart powertrain</h3>
+        <p>Led the powertrain department: motor and battery sizing, powertrain design and calculations, and integrated electrical safety features.</p>
+        <p class="ctx"><svg aria-hidden="true"><use href="#i-flag"/></svg>Head of Powertrain · Turbonites</p>
+      </li>
+      <li class="proj featured rv" id="p-falcon23" data-cat="aero award" data-start="2023.92">
+        <p class="proj-top"><span>2023–25</span><span class="cat">Autonomous UAV</span></p>
+        <h3>Falcon 2 &amp; 3</h3>
+        <p>Mission-specific autonomous multirotors with payload dropping and computer vision. Propulsion and power optimisation, calibration, PID tuning, mission planning.</p>
+        <p class="ctx won"><svg aria-hidden="true"><use href="#i-trophy"/></svg>ADDC 2024 — 2nd, Best Design Report · AeroTHON 2024 &amp; 2025</p>
+        <button class="proj-open" type="button" data-case="falcon">Case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </li>
+      <li class="proj rv" id="p-lumineer" data-cat="robotics" data-start="2023.92">
+        <p class="proj-top"><span>2023–24</span><span class="cat">Robotics</span></p>
+        <h3>Lumineer — autonomous lunar rover</h3>
+        <p>Designed a fully autonomous lunar rover with sample collection and drop capability.</p>
+        <p class="ctx"><svg aria-hidden="true"><use href="#i-flag"/></svg>IRoC-U 2024 — ISRO Robotics Challenge, U R Rao Satellite Centre</p>
+      </li>
+      <li class="proj rv" id="p-linefollower" data-cat="robotics electronics" data-start="2023.83">
+        <p class="proj-top"><span>2023–24</span><span class="cat">Robotics</span></p>
+        <h3>High-speed line follower</h3>
+        <p>Designed and built a high-speed line-following robot with Team McQuade.</p>
+        <p class="ctx"><svg aria-hidden="true"><use href="#i-flag"/></svg>Universal Robo League — national level</p>
+      </li>
+      <li class="proj rv" id="p-agv" data-cat="robotics" data-start="2023.25">
+        <p class="proj-top"><span>2023</span><span class="cat">Robotics</span></p>
+        <h3>AGV with obstacle avoidance</h3>
+        <p>My first competition build: an automated guided vehicle with obstacle avoidance, with Team Tronics.</p>
+        <p class="ctx"><svg aria-hidden="true"><use href="#i-flag"/></svg>Robo Rumble 2023</p>
+      </li>
+      <li class="proj featured rv" id="p-falcon1" data-cat="aero" data-start="2023.17">
+        <p class="proj-top"><span>2023–24</span><span class="cat">Autonomous UAV</span></p>
+        <h3>Falcon 1</h3>
+        <p>High-endurance multirotor with payload-dropping capability — Team Delta's first aircraft.</p>
+        <p class="ctx"><svg aria-hidden="true"><use href="#i-flag"/></svg>AeroTHON 2023</p>
+        <button class="proj-open" type="button" data-case="falcon">Case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </li>
+      <li class="proj rv" id="p-surveillance" data-cat="electronics award" data-start="2023.17">
+        <p class="proj-top"><span>2023</span><span class="cat">Electronics</span></p>
+        <h3>Rapidly deployable surveillance system</h3>
+        <p>ESP32-based wireless micro camera, viewable from any browser on the local Wi-Fi network. Designed and fabricated with Team Tronics.</p>
+        <p class="ctx won"><svg aria-hidden="true"><use href="#i-trophy"/></svg>1st place — CARPE DIEM hackathon, LICET</p>
+      </li>
+      <li class="proj rv" id="p-flightcomputer" data-cat="aero electronics" data-start="2023.08">
+        <p class="proj-top"><span>2023–24</span><span class="cat">Electronics</span></p>
+        <h3>Model-rocket flight computer</h3>
+        <p>Arduino Pro Mini flight computer with an MPU6050 accelerometer/gyroscope and a BMP280 barometer.</p>
+        <p class="ctx"><svg aria-hidden="true"><use href="#i-flag"/></svg>Personal project</p>
+      </li>
+      <li class="proj rv" id="p-baja" data-cat="vehicles making" data-start="2022.58">
+        <p class="proj-top"><span>2022–23</span><span class="cat">Vehicles</span></p>
+        <h3>Baja ATV</h3>
+        <p>Procurement, frame fabrication, vehicle wiring and electrical safety, powertrain assembly. Brought in 5S workshop organisation; pit manager at competition.</p>
+        <p class="ctx"><svg aria-hidden="true"><use href="#i-flag"/></svg>Powertrain member · Turbonites</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 04 EXPERIENCE ================= -->
+<section class="sec" id="experience" aria-labelledby="exp-h" data-title="Experience" data-keywords="timeline roles internship jobs avironix turbonites">
+  <div class="wrap">
+    <header class="sec-head rv"><span class="num">04</span><h2 id="exp-h">Experience</h2><span class="tail">2021 → now</span></header>
+    <p class="sec-intro rv">Most of it ran in parallel. In 2024 I was interning on UAV propulsion, running a 3D-printing business, captaining a drone team and heading an E-Kart powertrain — at the same time.</p>
+
+    <!-- Timeline: --from / --to are decimal years (2024.5 = July 2024). Rows with data-ongoing extend to today. -->
+    <figure class="gantt-wrap rv" id="gantt" aria-label="Timeline of roles and degrees, 2021 to now">
+      <div class="gantt-in">
+        <div class="g-axis" aria-hidden="true"><span></span><div class="g-years"><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div><span></span></div>
+        <ol class="gantt">
+          <li class="g-row" data-kind="edu" data-ongoing style="--from:2026.0;--to:2026.7;--i:0"><a class="g-label" href="#education">MEng — Dublin City University<small>Simulation-Driven Design</small></a><span class="g-track"><span class="g-bar"></span></span><span class="g-date">2026 – now</span></li>
+          <li class="g-row" data-ongoing style="--from:2024.33;--to:2026.7;--i:1"><a class="g-label" href="#r-xtrude">XTRUDE3D<small>Founder &amp; owner</small></a><span class="g-track"><span class="g-bar"></span></span><span class="g-date">May 24 – now</span></li>
+          <li class="g-row" style="--from:2024.5;--to:2025.33;--i:2"><a class="g-label" href="#r-avironix">Avironix Drones<small>Engineering intern</small></a><span class="g-track"><span class="g-bar"></span></span><span class="g-date">Jul 24 – Apr 25</span></li>
+          <li class="g-row" style="--from:2024.25;--to:2025.17;--i:3"><a class="g-label" href="#r-ekart">Turbonites E-Kart<small>Head of powertrain</small></a><span class="g-track"><span class="g-bar"></span></span><span class="g-date">Apr 24 – Feb 25</span></li>
+          <li class="g-row" style="--from:2023.17;--to:2025.33;--i:4"><a class="g-label" href="#r-delta">Turbonites Team Delta<small>Founder &amp; captain</small></a><span class="g-track"><span class="g-bar"></span></span><span class="g-date">Mar 23 – Apr 25</span></li>
+          <li class="g-row" style="--from:2022.58;--to:2023.25;--i:5"><a class="g-label" href="#r-baja">Turbonites Baja ATV<small>Powertrain member</small></a><span class="g-track"><span class="g-bar"></span></span><span class="g-date">Aug 22 – Mar 23</span></li>
+          <li class="g-row" data-kind="edu" style="--from:2021.58;--to:2025.42;--i:6"><a class="g-label" href="#education">BE Mechanical — LICET<small>First Class</small></a><span class="g-track"><span class="g-bar"></span></span><span class="g-date">2021 – 2025</span></li>
+        </ol>
+        <p class="g-legend" aria-hidden="true"><span><i></i>Role</span><span><i class="on"></i>Ongoing</span><span><i class="edu"></i>Degree</span><span><i class="now"></i>Today</span></p>
+      </div>
+    </figure>
+
+    <div class="roles">
+      <article class="role rv" id="r-avironix">
+        <span class="period">Jul 2024 – Apr 2025</span>
+        <h3>Engineering Intern</h3>
+        <p class="org">Avironix Drones</p>
+        <ul class="bul">
+          <li>Worked on UAV propulsion and power systems.</li>
+          <li>Sized and selected motors and battery packs for different UAVs.</li>
+          <li>Designed, analysed, fabricated and tested a propulsion-system test rig.</li>
+          <li>Wrote it up as my BE thesis: <em>Design and Development of Hybrid UAV Propulsion System Test Stand</em>.</li>
+        </ul>
+        <button class="proj-open" type="button" data-case="propulsion">Case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="role rv" id="r-xtrude" style="--d:1">
+        <span class="period">May 2024 – present</span>
+        <h3>Founder &amp; Owner</h3>
+        <p class="org">XTRUDE3D</p>
+        <ul class="bul">
+          <li>Started a business providing functional 3D printing and prototyping.</li>
+          <li>Serves industrial and engineering projects — parts with a job to do.</li>
+          <li>Runs the whole chain: client brief, design for the process, material, print, delivery.</li>
+        </ul>
+        <button class="proj-open" type="button" data-case="xtrude">Case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="role rv" id="r-delta">
+        <span class="period">Mar 2023 – Apr 2025</span>
+        <h3>Founder &amp; Captain</h3>
+        <p class="org">Turbonites Team Delta — UAV · LICET</p>
+        <ul class="bul">
+          <li>Formed a competitive interdepartmental UAV team of 20.</li>
+          <li>Designed mission-specific autonomous multirotors: Falcon 1, 2 and 3.</li>
+          <li>Competed nationally at AeroTHON 2023, 2024 and 2025 and ADDC 2024.</li>
+          <li>2nd Prize, Best Design Report — SAEISS ADDC 2024.</li>
+        </ul>
+        <button class="proj-open" type="button" data-case="falcon">Case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="role rv" id="r-ekart" style="--d:1">
+        <span class="period">Apr 2024 – Feb 2025</span>
+        <h3>Head of Powertrain</h3>
+        <p class="org">Turbonites — E-Kart · LICET</p>
+        <ul class="bul">
+          <li>Managed the powertrain department.</li>
+          <li>Motor and battery sizing; powertrain design and calculations.</li>
+          <li>Integrated electrical safety features.</li>
+        </ul>
+      </article>
+      <article class="role rv" id="r-baja">
+        <span class="period">Aug 2022 – Mar 2023</span>
+        <h3>Powertrain Member</h3>
+        <p class="org">Turbonites — Baja ATV · LICET</p>
+        <ul class="bul">
+          <li>Component procurement, frame fabrication, vehicle wiring and electrical safety.</li>
+          <li>Implemented 5S workplace organisation.</li>
+          <li>Assisted powertrain assembly; pit manager during competitions.</li>
+        </ul>
+      </article>
+      <article class="role rv" style="--d:1" aria-labelledby="r-lessons-h">
+        <span class="period">Across all of it</span>
+        <h3 id="r-lessons-h">What running teams taught me</h3>
+        <p class="org">Turbonites · LICET</p>
+        <ul class="bul">
+          <li>My time on the Baja team showed me how a competitive technical team really runs — including the parts nobody writes down.</li>
+          <li>A UAV lecture in second year turned into a team of my own.</li>
+          <li>Founding one meant recruiting across departments and training newcomers through drone-design workshops.</li>
+        </ul>
+      </article>
+
+      <details class="more rv">
+        <summary>Also: societies, events &amp; extra-curricular <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="more-grid">
+          <div><span class="period">2022 – 2024</span><h4>Workshops &amp; stalls</h4><p>Ran drone-design workshops; set up a 3D-printing stall to raise money for charity and a BBQ stall at the college symposium.</p></div>
+          <div><span class="period">Aug – Sep 2023</span><h4>Sponsorship team — Engenia 2023</h4><p>Found and coordinated sponsors; arranged stalls with food partners.</p></div>
+          <div><span class="period">Feb – Jun 2022</span><h4>Science Club core team</h4><p>Organised and hosted STEM events and quizzes.</p></div>
+          <div><span class="period">2021 – 2025</span><h4>LICET culturals — Engenia</h4><p>Trained juniors for off-stage events. 1st and 3rd in JAM (speaking); 3rd in short film.</p></div>
+          <div><span class="period">2021 – 2025</span><h4>Parade commander &amp; chess</h4><p>Department parade commander for sports day — drill, discipline and presentation. Department chess team.</p></div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 RECOGNITION ================= -->
+<section class="sec" id="recognition" aria-labelledby="rec-h" data-title="Recognition" data-keywords="awards prizes achievements judge mentor competitions">
+  <div class="wrap">
+    <header class="sec-head rv"><span class="num">05</span><h2 id="rec-h">Recognition</h2><span class="tail">Awards · judging · mentoring</span></header>
+
+    <ol class="awards">
+      <li class="award rv"><time datetime="2025-04">Apr 2025</time><div><h3><b>1st Prize</b> — Best Payload Mechanism Design</h3><p>ADDC 2025, SAEISS. With Team Phoenix — calibration, troubleshooting and test flights.</p></div><span class="level nat">National</span></li>
+      <li class="award rv"><time datetime="2024-09">Sep 2024</time><div><h3><b>National Rank 2</b> — CAM Competition</h3><p>NLSC, SAEISS. Showed distinctive 3D-printing methods and features; 1st place at both zonal and college level.</p></div><span class="level nat">National</span></li>
+      <li class="award rv"><time datetime="2024-03">Mar 2024</time><div><h3><b>2nd Prize</b> — Best Design Report</h3><p>SAEISS ADDC 2024 — Autonomous Drone Development Challenge. An industry-standard design report for Team Delta's entry.</p></div><span class="level nat">National</span></li>
+      <li class="award rv"><time datetime="2023-06">Jun 2023</time><div><h3><b>National Rank 2</b> — 3D Printing Competition</h3><p>NLSC, SAEISS. 1st place at both zonal and college level.</p></div><span class="level nat">National</span></li>
+      <li class="award rv"><time datetime="2023-06">Jun 2023</time><div><h3><b>3rd Prize</b> — Automotive Quiz</h3><p>NLSC, SAEISS.</p></div><span class="level">Zonal</span></li>
+      <li class="award rv"><time datetime="2023-03">Mar 2023</time><div><h3><b>1st Place</b> — CARPE DIEM Hackathon</h3><p>LICET. Designed and fabricated a rapidly deployable surveillance system.</p></div><span class="level">College</span></li>
+      <li class="award rv"><time>School</time><div><h3><b>State 1st</b> — Ascent science talent exam</h3><p>Inter-school competition, statewide.</p></div><span class="level">State</span></li>
+      <li class="award rv"><time>School</time><div><h3><b>Winner</b> — SCI-TECH Science Expo</h3><p>A piezoelectric shoe that charges a phone while jogging.</p></div><span class="level">Expo</span></li>
+    </ol>
+
+    <div class="sub-h service-h rv"><h3>Judging &amp; mentoring</h3><span class="mono">Invited roles</span></div>
+    <ul class="service">
+      <li class="rv"><span class="kind">Judge</span><h4>Torq2k25 — Shark Tank</h4><p>Invited judge for the shark-tank event at LICET's technical symposium.</p></li>
+      <li class="rv" style="--d:1"><span class="kind">Judge</span><h4>Envision'25 hackathon</h4><p>Invited judge for the interdepartmental hackathon run by LICET's Institution's Innovation Council.</p></li>
+      <li class="rv" style="--d:2"><span class="kind">Mentor</span><h4>Techie Trackers — Techno Teen'22</h4><p>Guided the development of an autonomous railway-track maintenance rover.</p></li>
+      <li class="rv" style="--d:3"><span class="kind">Mentor</span><h4>Power House — Envision'24</h4><p>Guided Dynami-Shoe, a piezoelectric energy-harvesting shoe that powers small electronic devices.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 06 EDUCATION & TOOLKIT ================= -->
+<section class="sec" id="education" aria-labelledby="edu-h" data-title="Education & toolkit" data-keywords="degree meng be dcu licet thesis certifications skills solidworks">
+  <div class="wrap">
+    <header class="sec-head rv"><span class="num">06</span><h2 id="edu-h">Education &amp; toolkit</h2><span class="tail">Degrees · certifications · skills</span></header>
+
+    <div class="degrees rv">
+      <div class="degree">
+        <div><h3>MEng Mechanical &amp; Manufacturing Engineering</h3><p class="school">Dublin City University — Major in Simulation-Driven Design</p></div>
+        <div class="thesis"><b>Thesis · in progress</b>Simulation of the aerodynamic interaction of an aerofoil under different wind loads, for a novel wind energy system.</div>
+        <div class="yrs"><span class="period">2026 – present</span><span class="badge-now">● Current</span></div>
+      </div>
+      <div class="degree">
+        <div><h3>BE Mechanical Engineering — First Class</h3><p class="school">Loyola-ICAM College of Engineering and Technology (LICET), Chennai</p></div>
+        <div class="thesis"><b>Thesis</b>Design and Development of Hybrid UAV Propulsion System Test Stand.</div>
+        <div class="yrs"><span class="period">2021 – 2025</span><span class="period">Chennai, IN</span></div>
+      </div>
+    </div>
+
+    <div class="sub-h rv"><h3>Certifications</h3><span class="mono">6 credentials</span></div>
+    <ul class="certs">
+      <li class="cert rv"><svg aria-hidden="true"><use href="#i-badge"/></svg><div><h4>SOLIDWORKS Electrical Associate</h4><p>SOLIDWORKS certification</p></div></li>
+      <li class="cert rv" style="--d:1"><svg aria-hidden="true"><use href="#i-badge"/></svg><div><h4>SOLIDWORKS Additive Manufacturing Associate</h4><p>SOLIDWORKS certification</p></div></li>
+      <li class="cert rv" style="--d:2"><svg aria-hidden="true"><use href="#i-badge"/></svg><div><h4>Design Principles for 3D Printed Parts</h4><p>Prusa Research</p></div></li>
+      <li class="cert rv"><svg aria-hidden="true"><use href="#i-badge"/></svg><div><h4>UAV in Engineering Applications</h4><p>NPTEL</p></div></li>
+      <li class="cert rv" style="--d:1"><svg aria-hidden="true"><use href="#i-badge"/></svg><div><h4>IELTS Academic — Band 8</h4><p>English proficiency</p></div></li>
+      <li class="cert rv" style="--d:2"><svg aria-hidden="true"><use href="#i-badge"/></svg><div><h4>Upper Intermediate English</h4><p>British Council</p></div></li>
+    </ul>
+
+    <div class="sub-h rv"><h3>Toolkit</h3><span class="mono">Highlighted = certified or core</span></div>
+    <div class="skills rv">
+      <div class="skill"><h4>Design &amp; simulation</h4><ul class="tags"><li class="strong">SOLIDWORKS</li><li class="strong">Simulation-driven design</li><li>CAD / CAE</li><li>Aerodynamic analysis</li><li>Design optimisation</li><li>System design</li></ul></div>
+      <div class="skill"><h4>Manufacturing</h4><ul class="tags"><li class="strong">FDM 3D printing</li><li class="strong">Design for AM</li><li>Slicing software</li><li>Rapid prototyping</li><li>Fabrication</li><li>5S</li></ul></div>
+      <div class="skill"><h4>UAV &amp; propulsion</h4><ul class="tags"><li class="strong">Propulsion sizing</li><li class="strong">Battery-pack sizing</li><li>Test-rig design</li><li>Calibration &amp; PID tuning</li><li>Mission planning</li><li>GCS software</li></ul></div>
+      <div class="skill"><h4>Electronics</h4><ul class="tags"><li>Arduino</li><li>ESP32</li><li>IMU &amp; barometer integration</li><li>Vehicle wiring</li><li>Electrical safety</li></ul></div>
+      <div class="skill"><h4>People</h4><ul class="tags"><li class="strong">Team building</li><li class="strong">Leadership</li><li>Presentation</li><li>Communication</li><li>Mentoring</li><li>Sponsorship</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 07 ABOUT ================= -->
+<section class="sec" id="about" aria-labelledby="about-h" data-title="About" data-keywords="bio background chennai dublin interests photos gallery">
+  <div class="wrap">
+    <header class="sec-head rv"><span class="num">07</span><h2 id="about-h">About</h2><span class="tail">Chennai → Dublin</span></header>
+
+    <div class="about">
+      <figure class="about-portrait rv" style="margin:0">
+        <img loading="lazy" src="images/portrait-800.jpg" srcset="images/portrait-800.jpg 800w, images/portrait-1600.jpg 1086w" sizes="(max-width:900px) 420px, 36vw" width="800" height="1067" alt="Samuel Wesley Mondal in a suit outside the Dublin City University Student Centre">
+        <figcaption>Dublin City University</figcaption>
+      </figure>
+      <div class="about-text rv" style="--d:1">
+        <p class="big">Engineering, for me, is less a degree than a habit: find a real problem, get the right people around it, and build something that works.</p>
+        <p>I grew up in Chennai and took a First Class BE in Mechanical Engineering at LICET. Most of those four years happened outside the lecture hall — on a Baja team, founding a UAV team, running a 3D-printing business and interning on drone propulsion at Avironix.</p>
+        <p>Now I'm in Dublin doing an MEng at DCU with a major in simulation-driven design, adding modelling rigour to the building habit. I'm competitive by nature, and I like bringing together people with the same mindset to solve a problem properly.</p>
+        <dl class="about-facts">
+          <div><dt>Based in</dt><dd>Dublin, Ireland</dd></div>
+          <div><dt>From</dt><dd>Chennai, India</dd></div>
+          <div><dt>Studying</dt><dd>MEng, Dublin City University</dd></div>
+          <div><dt>English</dt><dd>IELTS Academic Band 8</dd></div>
+        </dl>
+        <p class="mono" style="margin-bottom:12px">Off the clock</p>
+        <ul class="interests"><li>Unmanned aerial systems</li><li>Aerospace</li><li>Physics</li><li>Chess</li><li>Speed cubing</li><li>MMA</li><li>Camping &amp; fishing</li></ul>
+      </div>
+    </div>
+
+    <div class="mosaic" aria-label="Photos from the workshop and competitions">
+      <a class="rv" href="images/uav-competition-1600.jpg" data-lightbox="field" data-caption="At a national drone competition"><img loading="lazy" src="images/uav-competition-800.jpg" width="800" height="1067" alt="Team of twelve with their drone under a competition marquee"></a>
+      <a class="rv" href="images/baja-atv-1600.jpg" data-lightbox="field" data-caption="Turbonites Baja ATV team"><img loading="lazy" src="images/baja-atv-800.jpg" width="800" height="450" alt="Baja team lined up with their green ATV"></a>
+      <a class="rv" href="images/xtrude-team-1600.jpg" data-lightbox="field" data-caption="The XTRUDE3D stand"><img loading="lazy" src="images/xtrude-team-800.jpg" width="800" height="600" alt="Four people at the XTRUDE3D exhibition stand"></a>
+      <a class="rv" href="images/uav-build-1600.jpg" data-lightbox="field" data-caption="Hexacopter build &amp; wiring"><img loading="lazy" src="images/uav-build-800.jpg" width="800" height="1067" alt="Three people assembling and wiring a hexacopter at a workbench"></a>
+      <a class="rv" href="images/print-duct-1600.jpg" data-lightbox="field" data-caption="Large-format functional print"><img loading="lazy" src="images/print-duct-800.jpg" width="800" height="1062" alt="Black 3D-printed conical duct on the printer bed"></a>
+      <a class="rv" href="images/xtrude-parts-1600.jpg" data-lightbox="field" data-caption="Printed parts — XTRUDE3D"><img loading="lazy" src="images/xtrude-parts-800.jpg" width="800" height="600" alt="3D-printed parts next to an XTRUDE3D business card"></a>
+      <a class="rv" href="images/xtrude-stand-1600.jpg" data-lightbox="field" data-caption="XTRUDE3D at an exhibition"><img loading="lazy" src="images/xtrude-stand-800.jpg" width="800" height="1067" alt="Samuel Wesley Mondal standing at the XTRUDE3D exhibition stand"></a>
+   </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec" id="contact" aria-labelledby="contact-h" data-title="Contact" data-keywords="email hire internship placement message linkedin">
+  <div class="wrap">
+    <div class="contact">
+      <div class="rv">
+        <h2 id="contact-h">Have a problem that needs a model <span>and a prototype?</span></h2>
+        <p class="lede">I'm looking for internships and placements in mechanical design, simulation and UAV systems. Email is the fastest way to reach me.</p>
+        <div class="email-row">
+          <svg aria-hidden="true" style="width:18px;height:18px;color:var(--accent)"><use href="#i-mail"/></svg>
+          <a href="mailto:samuelwesley.mondal2@mail.dcu.ie">samuelwesley.mondal2@mail.dcu.ie</a>
+          <button class="btn btn-sm" type="button" data-copy="samuelwesley.mondal2@mail.dcu.ie"><svg aria-hidden="true"><use href="#i-copy"/></svg>Copy</button>
+        </div>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:samuelwesley.mondal2@mail.dcu.ie?subject=Hello%20Wesley"><svg aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/samuel-wesleymondal" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+          <a class="btn" href="samuel-wesley-mondal.vcf" download><svg aria-hidden="true"><use href="#i-card"/></svg>Save contact</a>
+          <a class="btn" href="cv.html"><svg aria-hidden="true"><use href="#i-doc"/></svg>Web CV</a>
+        </div>
+        <dl class="glance">
+          <div><dt>Currently</dt><dd>MEng, Dublin City University<small>Simulation-Driven Design</small></dd></div>
+          <div><dt>Looking for</dt><dd>Internship / placement<small>Mechanical design · simulation · UAV</small></dd></div>
+          <div><dt>Based in</dt><dd>Dublin, Ireland<small>Local time <span data-dublin-time>—</span></small></dd></div>
+          <div><dt>Languages</dt><dd>English<small>IELTS Academic Band 8</small></dd></div>
+        </dl>
+      </div>
+
+      <form class="form rv" id="contact-form" style="--d:1" novalidate>
+        <div class="form-h"><h3>Write to me</h3><span class="mono">~1 minute</span></div>
+        <div class="form-row">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-org">Company / organisation</label><input id="f-org" name="org" autocomplete="organization"></div>
+        </div>
+        <div class="field">
+          <label for="f-reason">About</label>
+          <select id="f-reason" name="reason">
+            <option>Internship</option>
+            <option>Placement</option>
+            <option>Graduate role</option>
+            <option>Project or collaboration</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required placeholder="What are you working on?"></textarea></div>
+        <button class="btn primary" type="submit"><svg aria-hidden="true"><use href="#i-mail"/></svg>Compose email</button>
+        <p class="form-note">Opens your email app with this filled in. Nothing is stored or sent by this site.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
 </main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top"><svg class="brand-mark" aria-hidden="true" style="color:var(--accent)"><use href="#i-mark"/></svg><span>Samuel Wesley Mondal<b>.</b></span></a>
+        <p>Mechanical engineer working between simulation and hardware. Dublin, Ireland.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h4>Navigate</h4>
+        <ul><li><a href="#work">Selected work</a></li><li><a href="#projects">Project index</a></li><li><a href="#experience">Experience</a></li><li><a href="#recognition">Recognition</a></li><li><a href="#education">Education</a></li></ul>
+      </nav>
+      <div>
+        <h4>Connect</h4>
+        <ul><li><a href="mailto:samuelwesley.mondal2@mail.dcu.ie">Email</a></li><li><a href="https://www.linkedin.com/in/samuel-wesleymondal" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="samuel-wesley-mondal.vcf" download>Save contact (.vcf)</a></li><li><a href="cv.html">Web CV</a></li></ul>
+      </div>
+      <div>
+        <h4>This site</h4>
+        <ul><li><a href="#" data-palette-open>Search · <span data-mod-text>Ctrl K</span></a></li><li><a href="#" data-theme-toggle>Toggle theme</a></li><li><a href="#top">Back to top</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© <span data-year>2026</span> Samuel Wesley Mondal</span>
+      <span>Hand-built HTML, CSS &amp; JS · no trackers · no cookies</span>
+    </div>
+  </div>
+</footer>
+
+<button class="icon-btn to-top" type="button" data-to-top aria-label="Back to top"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+<div class="toast" id="toast" role="status" aria-live="polite"><svg aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
+
+
+<!-- =====================================================================
+     CASE STUDIES — one <dialog> each. Open via any element with data-case="id".
+     Deep link: /#case-vawt etc. Order here = prev/next order.
+     ===================================================================== -->
+
+<!-- CASE 01 — VAWT -->
+<dialog class="case" id="case-vawt" aria-labelledby="case-vawt-t" data-title="H-type Darrieus VAWT" data-keywords="wind turbine vertical axis darrieus aerodynamics wind tunnel tip speed ratio">
+  <div class="case-bar">
+    <p class="mono">Case study 01 / 04</p>
+    <div class="case-nav">
+      <button class="icon-btn" type="button" data-case-prev aria-label="Previous case study"><svg aria-hidden="true"><use href="#i-prev"/></svg></button>
+      <button class="icon-btn" type="button" data-case-next aria-label="Next case study"><svg aria-hidden="true"><use href="#i-next"/></svg></button>
+      <button class="icon-btn" type="button" data-case-close aria-label="Close case study"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+  </div>
+  <article class="case-body">
+    <header class="case-head">
+      <p class="meta-row"><span class="kind">Wind energy</span><span class="period">Jan – Apr 2026</span></p>
+      <h2 id="case-vawt-t">H-type Darrieus vertical-axis wind turbine</h2>
+      <p class="case-lede">A straight-bladed Darrieus rotor, taken from design and analysis through optimisation to wind-tunnel testing. The brief set two objectives — and the second is what this whole portfolio is about.</p>
+    </header>
+    <dl class="case-facts">
+      <div><dt>Scope</dt><dd>Design, analysis, optimisation, experimental validation</dd></div>
+      <div><dt>Period</dt><dd>Jan – Apr 2026</dd></div>
+      <div><dt>Test</dt><dd>Wind tunnel, varying loads</dd></div>
+      <div><dt>Loop</dt><dd><ul class="stages"><li class="on">Sim</li><li class="on">Build</li><li class="on">Test</li></ul></dd></div>
+    </dl>
+
+    <div class="case-sec">
+      <h3>The brief</h3>
+      <div class="body">
+        <ol class="obj"><li>Maximise power output under varying loads.</li><li>Minimise the deviation between predicted and experimental performance.</li></ol>
+        <p>The first objective is a design problem. The second is a modelling problem: it asks how good the <strong>prediction</strong> was, not just how good the turbine was.</p>
+      </div>
+    </div>
+
+    <div class="case-sec">
+      <h3>Why it's hard</h3>
+      <div class="body">
+        <p>An H-rotor blade never sits at one angle of attack. As it travels round, the flow it sees swings through a large range every revolution — and at low tip-speed ratios that swing goes well past the angle where a static aerofoil stalls. Move the slider.</p>
+        <figure class="aoa" data-aoa>
+          <div class="aoa-top">
+            <label for="tsr">Tip-speed ratio <span class="sym">λ</span></label>
+            <input type="range" id="tsr" min="1.5" max="6" step="0.1" value="2.5">
+            <output for="tsr" id="tsr-out">2.5</output>
+          </div>
+          <svg viewBox="0 0 640 250" role="img" aria-label="Angle of attack against azimuth for one blade over a full revolution"></svg>
+          <p class="aoa-read">Peak α <b data-aoa-peak>—</b> · Beyond ±13° for <b data-aoa-stall>—</b> of each turn · Relative speed W/U∞ from <b data-aoa-w>—</b></p>
+          <figcaption>Geometric angle of attack for one blade, α = atan[sin θ / (λ + cos θ)], ignoring induced velocity. Shaded band: an illustrative static-stall range of ±13°. Textbook blade kinematics to show the problem — not measured data from this project.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="case-sec">
+      <h3>Method</h3>
+      <div class="body">
+        <ol class="steps3">
+          <li><b>01 Simulate</b><p>Analysed the rotor and optimised the design for power output across the load range.</p></li>
+          <li><b>02 Build</b><p>Produced the rotor as a physical test article for the tunnel.</p></li>
+          <li><b>03 Validate</b><p>Tested under varying loads and compared measured performance against the prediction.</p></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="case-sec">
+      <h3>Rotor</h3>
+      <div class="body">
+        <div class="case-visual grid-bg">
+          <svg class="dia" viewBox="0 0 480 360" role="img" aria-label="Schematic of an H-type Darrieus rotor seen from above.">
+            <g class="ln-2" stroke-width="1.2" stroke-linecap="round" opacity=".7">
+              <path d="M14 116h62M68 110l8 6-8 6"/><path d="M14 156h62M68 150l8 6-8 6"/>
+              <path d="M14 196h62M68 190l8 6-8 6"/><path d="M14 236h62M68 230l8 6-8 6"/>
+            </g>
+            <text x="14" y="96">U∞</text>
+            <circle cx="280" cy="180" r="118" class="ln" stroke-dasharray="3 6"/>
+            <g class="spin">
+              <circle cx="280" cy="180" r="140" fill="none"/>
+              <g><path class="ln-2" d="M280 180V66"/><path class="blade" transform="translate(280 62)" d="M-22 0C-18-5.5-6-6 8-4.5 14-3.6 19-1.6 22 0 19 1.6 14 3.6 8 4.5-6 6-18 5.5-22 0Z"/></g>
+              <g transform="rotate(120 280 180)"><path class="ln-2" d="M280 180V66"/><path class="blade" transform="translate(280 62)" d="M-22 0C-18-5.5-6-6 8-4.5 14-3.6 19-1.6 22 0 19 1.6 14 3.6 8 4.5-6 6-18 5.5-22 0Z"/></g>
+              <g transform="rotate(240 280 180)"><path class="ln-2" d="M280 180V66"/><path class="blade" transform="translate(280 62)" d="M-22 0C-18-5.5-6-6 8-4.5 14-3.6 19-1.6 22 0 19 1.6 14 3.6 8 4.5-6 6-18 5.5-22 0Z"/></g>
+            </g>
+            <circle cx="280" cy="180" r="8" class="acc" stroke-width="1.6" style="fill:var(--bg-2)"/>
+            <path class="acc" stroke-width="1.3" d="M196 52A140 140 0 0 0 150 118"/>
+            <path class="acc" stroke-width="1.3" d="M145 108l5 11 8-9"/>
+            <text x="150" y="80" class="t-acc">ω</text>
+            <text x="300" y="340" class="t-fg">λ = ωR / U∞</text>
+          </svg>
+        </div>
+        <p>Straight blades on struts, turning about a vertical shaft: the rotor accepts wind from any direction, at the cost of the cyclic loading shown above. Schematic only.</p>
+      </div>
+    </div>
+
+    <div class="case-sec">
+      <h3>Connects to</h3>
+      <div class="body">
+        <p>This sits right next to my MEng thesis at DCU — simulating the aerodynamic interaction of an aerofoil under different wind loads, for a novel wind energy system.</p>
+        <ul class="tags"><li>Aerodynamics</li><li>VAWT</li><li>Darrieus</li><li>Wind tunnel</li><li>Optimisation</li><li>Validation</li></ul>
+      </div>
+    </div>
+    <!-- ADD WHEN AVAILABLE: measured power curve (Cp vs λ), peak Cp, and % deviation between predicted and measured. A real contour plot would replace the schematic above. -->
+
+    <div class="case-cta"><p>Want the detail behind this project?</p><a class="btn primary btn-sm" href="mailto:samuelwesley.mondal2@mail.dcu.ie?subject=Your%20VAWT%20project">Ask me about it <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    <div class="case-foot"></div>
+  </article>
+</dialog>
+
+<!-- CASE 02 — Propulsion test stand -->
+<dialog class="case" id="case-propulsion" aria-labelledby="case-propulsion-t" data-title="Hybrid UAV propulsion test stand" data-keywords="avironix internship thesis motor battery sizing thrust rig drone">
+  <div class="case-bar">
+    <p class="mono">Case study 02 / 04</p>
+    <div class="case-nav">
+      <button class="icon-btn" type="button" data-case-prev aria-label="Previous case study"><svg aria-hidden="true"><use href="#i-prev"/></svg></button>
+      <button class="icon-btn" type="button" data-case-next aria-label="Next case study"><svg aria-hidden="true"><use href="#i-next"/></svg></button>
+      <button class="icon-btn" type="button" data-case-close aria-label="Close case study"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+  </div>
+  <article class="case-body">
+    <header class="case-head">
+      <p class="meta-row"><span class="kind">UAV propulsion</span><span class="period">Jul 2024 – Apr 2025</span></p>
+      <h2 id="case-propulsion-t">Hybrid UAV propulsion test stand</h2>
+      <p class="case-sub">Engineering intern, Avironix Drones · BE thesis, LICET</p>
+      <p class="case-lede">Sizing a UAV's propulsion and power system is a prediction built from datasheets and calculations. At Avironix I did that sizing for different aircraft — then designed, analysed, fabricated and tested a propulsion test rig so the predictions could be checked on the bench before anything flew.</p>
+    </header>
+    <dl class="case-facts">
+      <div><dt>Role</dt><dd>Engineering intern</dd></div>
+      <div><dt>Period</dt><dd>Jul 2024 – Apr 2025</dd></div>
+      <div><dt>Output</dt><dd>Test rig + BE thesis</dd></div>
+      <div><dt>Loop</dt><dd><ul class="stages"><li class="on">Sim</li><li class="on">Build</li><li class="on">Test</li></ul></dd></div>
+    </dl>
+
+    <div class="case-sec">
+      <h3>The problem</h3>
+      <div class="body">
+        <p>Motor, propeller and battery are chosen together, and every choice trades against the others — endurance against payload against mass against thermal headroom. Datasheet figures are measured under someone else's conditions. A test stand is how you find out what <strong>your</strong> combination actually delivers.</p>
+      </div>
+    </div>
+
+    <div class="case-sec">
+      <h3>What I did</h3>
+      <div class="body">
+        <ul class="bul">
+          <li>Sized and selected motors and battery packs for different UAVs.</li>
+          <li>Designed and analysed a propulsion-system test rig.</li>
+          <li>Fabricated the rig and tested propulsion configurations on it.</li>
+          <li>Wrote it up as my undergraduate thesis: <em>Design and Development of Hybrid UAV Propulsion System Test Stand</em>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-sec">
+      <h3>Method</h3>
+      <div class="body">
+        <div class="case-visual grid-bg">
+          <svg class="dia" viewBox="0 0 480 360" role="img" aria-label="Method diagram: requirement, sizing, test stand, compare, with a loop back to sizing.">
+            <rect class="box" x="90" y="22" width="270" height="56" rx="8"/>
+            <text x="108" y="45" class="t-acc">01  REQUIREMENT</text><text x="108" y="64">payload · endurance · mass</text>
+            <rect class="box" x="90" y="108" width="270" height="56" rx="8"/>
+            <text x="108" y="131" class="t-acc">02  SIZE</text><text x="108" y="150">motor · propeller · battery pack</text>
+            <rect class="box-acc" x="90" y="194" width="270" height="56" rx="8"/>
+            <text x="108" y="217" class="t-acc">03  TEST STAND</text><text x="108" y="236" class="t-fg">designed · analysed · fabricated</text>
+            <rect class="box" x="90" y="280" width="270" height="56" rx="8"/>
+            <text x="108" y="303" class="t-acc">04  COMPARE</text><text x="108" y="322">measured vs predicted</text>
+            <g class="ln-2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M225 78v26M220 98l5 6 5-6"/><path d="M225 164v26M220 184l5 6 5-6"/><path d="M225 250v26M220 270l5 6 5-6"/></g>
+            <g class="acc" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M360 308h44V136h-38"/><path d="M372 130l-7 6 7 6"/></g>
+            <text x="412" y="230" class="t-acc" transform="rotate(90 412 230)" text-anchor="middle">REVISE</text>
+          </svg>
+        </div>
+        <ol class="steps3">
+          <li><b>01 Simulate</b><p>Size motor, propeller and battery pack from the requirement and datasheets.</p></li>
+          <li><b>02 Build</b><p>Design, analyse and fabricate the test rig.</p></li>
+          <li><b>03 Validate</b><p>Bench-test the combinations and compare against the sizing.</p></li>
+        </ol>
+        <ul class="tags" style="margin-top:18px"><li>Propulsion</li><li>Battery sizing</li><li>Test-rig design</li><li>Fabrication</li><li>Hybrid power</li></ul>
+      </div>
+    </div>
+    <!-- ADD WHEN AVAILABLE: photo of the rig; measured thrust / efficiency vs datasheet; % difference between sizing and bench result. -->
+
+    <div class="case-cta"><p>Want the detail behind this project?</p><a class="btn primary btn-sm" href="mailto:samuelwesley.mondal2@mail.dcu.ie?subject=Your%20propulsion%20test%20stand">Ask me about it <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    <div class="case-foot"></div>
+  </article>
+</dialog>
+
+<!-- CASE 03 — Team Delta / Falcon -->
+<dialog class="case" id="case-falcon" aria-labelledby="case-falcon-t" data-title="Team Delta & the Falcon multirotors" data-keywords="drone uav team leadership aerothon addc falcon captain founder competition">
+  <div class="case-bar">
+    <p class="mono">Case study 03 / 04</p>
+    <div class="case-nav">
+      <button class="icon-btn" type="button" data-case-prev aria-label="Previous case study"><svg aria-hidden="true"><use href="#i-prev"/></svg></button>
+      <button class="icon-btn" type="button" data-case-next aria-label="Next case study"><svg aria-hidden="true"><use href="#i-next"/></svg></button>
+      <button class="icon-btn" type="button" data-case-close aria-label="Close case study"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+  </div>
+  <article class="case-body">
+    <header class="case-head">
+      <p class="meta-row"><span class="kind">Autonomous UAVs</span><span class="period">Mar 2023 – Apr 2025</span></p>
+      <h2 id="case-falcon-t">Team Delta &amp; the Falcon multirotors</h2>
+      <p class="case-sub">Founder &amp; captain, Turbonites Team Delta — UAV</p>
+      <p class="case-lede">In my second year I formed Team Delta, a competitive interdepartmental UAV team, and captained it for two years. Twenty people, three mission-specific aircraft, and national competitions where the drone either completes the mission or it doesn't.</p>
+    </header>
+    <dl class="case-facts">
+      <div><dt>Role</dt><dd>Founder &amp; captain</dd></div>
+      <div><dt>Team</dt><dd>20 members, interdepartmental</dd></div>
+      <div><dt>Competitions</dt><dd>AeroTHON 2023–25 · ADDC 2024</dd></div>
+      <div><dt>Loop</dt><dd><ul class="stages"><li class="on">Sim</li><li class="on">Build</li><li class="on">Test</li></ul></dd></div>
+    </dl>
+
+    <div class="case-visual">
+      <img loading="lazy" src="images/uav-competition-800.jpg" srcset="images/uav-competition-800.jpg 800w, images/uav-competition-1600.jpg 1600w" sizes="(max-width:1140px) 92vw, 1040px" width="800" height="1067" alt="Team of twelve with their drone under a competition marquee" style="aspect-ratio:16/9;object-position:50% 45%">
+    </div>
+
+    <div class="case-sec">
+      <h3>The fleet</h3>
+      <div class="body">
+        <ul class="fleet">
+          <li><span class="period">Mar 2023 – Nov 2024</span><h4>Falcon 1</h4><p>High-endurance multirotor with payload-dropping capability.</p><ul class="tags"><li>AeroTHON 2023</li></ul></li>
+          <li><span class="period">Dec 2023 – Apr 2025</span><h4>Falcon 2 &amp; 3</h4><p>Autonomous multirotors with payload dropping and computer vision.</p><ul class="tags"><li>ADDC 2024</li><li>AeroTHON 2024</li><li>AeroTHON 2025</li></ul></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-sec">
+      <h3>My part</h3>
+      <div class="body">
+        <ul class="bul">
+          <li>Formed and led the team: 20 members from across departments.</li>
+          <li>Worked extensively on the aircraft design, optimising propulsion and power systems.</li>
+          <li>Calibration and PID tuning; mission planning.</li>
+          <li>Wrote the industry-standard design report for ADDC 2024.</li>
+          <li>Ran drone-design workshops to bring new people in.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-sec">
+      <h3>Results</h3>
+      <div class="body">
+        <ul class="bul">
+          <li><strong>2nd Prize — Best Design Report</strong>, SAEISS ADDC 2024.</li>
+          <li>Also: <strong>1st Prize — Best Payload Mechanism Design</strong>, ADDC 2025, as part of Team Phoenix (calibration, troubleshooting, test flights).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-sec">
+      <h3>Gallery</h3>
+      <div class="body">
+        <div class="case-gallery">
+          <a class="wide" href="images/uav-team-1600.jpg" data-lightbox="falcon" data-caption="Team Delta"><img loading="lazy" src="images/uav-team-800.jpg" width="800" height="1067" alt="Team Delta seated on steps with their drone" style="object-position:50% 65%"></a>
+          <a href="images/uav-build-1600.jpg" data-lightbox="falcon" data-caption="Hexacopter build &amp; wiring"><img loading="lazy" src="images/uav-build-800.jpg" width="800" height="1067" alt="Three people wiring a hexacopter at a bench"></a>
+          <a href="images/uav-detail-800.jpg" data-lightbox="falcon" data-caption="Multirotor bench work"><img loading="lazy" src="images/uav-detail-800.jpg" width="640" height="640" alt="Hands working on a hexacopter's propulsion hardware"></a>
+        </div>
+        <ul class="tags" style="margin-top:18px"><li>Leadership</li><li>Multirotor design</li><li>Propulsion &amp; power</li><li>PID tuning</li><li>Mission planning</li><li>Computer vision</li></ul>
+      </div>
+    </div>
+    <!-- ADD WHEN AVAILABLE: AUW, endurance, payload mass, placements at AeroTHON. -->
+
+    <div class="case-cta"><p>Want the detail behind this project?</p><a class="btn primary btn-sm" href="mailto:samuelwesley.mondal2@mail.dcu.ie?subject=Team%20Delta%20and%20the%20Falcon%20drones">Ask me about it <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    <div class="case-foot"></div>
+  </article>
+</dialog>
+
+<!-- CASE 04 — XTRUDE3D -->
+<dialog class="case" id="case-xtrude" aria-labelledby="case-xtrude-t" data-title="XTRUDE3D — functional 3D printing" data-keywords="startup business additive manufacturing 3d printing fdm prototyping founder">
+  <div class="case-bar">
+    <p class="mono">Case study 04 / 04</p>
+    <div class="case-nav">
+      <button class="icon-btn" type="button" data-case-prev aria-label="Previous case study"><svg aria-hidden="true"><use href="#i-prev"/></svg></button>
+      <button class="icon-btn" type="button" data-case-next aria-label="Next case study"><svg aria-hidden="true"><use href="#i-next"/></svg></button>
+      <button class="icon-btn" type="button" data-case-close aria-label="Close case study"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+  </div>
+  <article class="case-body">
+    <header class="case-head">
+      <p class="meta-row"><span class="kind">Additive manufacturing</span><span class="period">May 2024 – present</span></p>
+      <h2 id="case-xtrude-t">XTRUDE3D — functional 3D printing</h2>
+      <p class="case-sub">Founder &amp; owner</p>
+      <p class="case-lede">A startup that provides functional 3D printing and prototyping for industrial and engineering projects. Functional is the operative word: parts that carry load, fit an assembly and survive use.</p>
+    </header>
+    <dl class="case-facts">
+      <div><dt>Role</dt><dd>Founder &amp; owner</dd></div>
+      <div><dt>Since</dt><dd>May 2024</dd></div>
+      <div><dt>Clients</dt><dd>Industrial &amp; engineering projects</dd></div>
+      <div><dt>Loop</dt><dd><ul class="stages"><li>Sim</li><li class="on">Build</li><li>Test</li></ul></dd></div>
+    </dl>
+
+    <div class="case-visual">
+      <img loading="lazy" src="images/xtrude-team-800.jpg" srcset="images/xtrude-team-800.jpg 800w, images/xtrude-team-1600.jpg 1280w" sizes="(max-width:1140px) 92vw, 1040px" width="800" height="600" alt="Four people at the XTRUDE3D exhibition stand" style="aspect-ratio:16/9">
+    </div>
+
+    <div class="case-sec">
+      <h3>What it does</h3>
+      <div class="body">
+        <p>Running it means owning the whole chain: the client's problem, designing the part for the process, choosing the material, printing it, and standing behind it afterwards.</p>
+      </div>
+    </div>
+
+    <div class="case-sec">
+      <h3>Credentials</h3>
+      <div class="body">
+        <ul class="bul">
+          <li><strong>National Rank 2 — 3D Printing Competition</strong>, SAEISS NLSC (2023), with 1st place at zonal and college level.</li>
+          <li><strong>National Rank 2 — CAM Competition</strong>, SAEISS NLSC (2024).</li>
+          <li>SOLIDWORKS Additive Manufacturing Associate.</li>
+          <li>Design Principles for 3D Printed Parts — Prusa Research.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-sec">
+      <h3>Gallery</h3>
+      <div class="body">
+        <div class="case-gallery">
+          <a href="images/print-cowling-1600.jpg" data-lightbox="xtrude" data-caption="Large-format functional print"><img loading="lazy" src="images/print-cowling-800.jpg" width="800" height="1062" alt="Large black printed cowling held above a printer bed"></a>
+          <a href="images/print-duct-1600.jpg" data-lightbox="xtrude" data-caption="Large-format functional print"><img loading="lazy" src="images/print-duct-800.jpg" width="800" height="1062" alt="Black printed conical duct on the printer bed"></a>
+          <a href="images/xtrude-stand-1600.jpg" data-lightbox="xtrude" data-caption="XTRUDE3D at an exhibition"><img loading="lazy" src="images/xtrude-stand-800.jpg" width="800" height="1067" alt="Samuel Wesley Mondal at the XTRUDE3D stand"></a>
+          <a class="wide" href="images/xtrude-parts-1600.jpg" data-lightbox="xtrude" data-caption="Printed parts — XTRUDE3D"><img loading="lazy" src="images/xtrude-parts-800.jpg" width="800" height="600" alt="Printed parts beside an XTRUDE3D business card"></a>
+        </div>
+        <ul class="tags" style="margin-top:18px"><li>DfAM</li><li>FDM</li><li>Functional parts</li><li>Prototyping</li><li>Client delivery</li></ul>
+      </div>
+    </div>
+    <!-- ADD WHEN AVAILABLE: number of clients/parts delivered, typical materials, one worked example with the load case. -->
+
+    <div class="case-cta"><p>Need a functional part printed?</p><a class="btn primary btn-sm" href="mailto:samuelwesley.mondal2@mail.dcu.ie?subject=XTRUDE3D%20enquiry">Get in touch <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    <div class="case-foot"></div>
+  </article>
+</dialog>
+
+
+<!-- ================= MOBILE MENU ================= -->
+<dialog class="menu" id="menu" aria-label="Menu">
+  <div class="menu-head">
+    <a class="brand" href="#top"><svg class="brand-mark" aria-hidden="true" style="color:var(--accent)"><use href="#i-mark"/></svg><span>SWM<b>.</b></span></a>
+    <button class="icon-btn" type="button" data-menu-close aria-label="Close menu"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <nav class="menu-links" aria-label="Menu">
+    <a href="#approach"><span>01</span>How I work</a>
+    <a href="#work"><span>02</span>Selected work</a>
+    <a href="#projects"><span>03</span>Project index</a>
+    <a href="#experience"><span>04</span>Experience</a>
+    <a href="#recognition"><span>05</span>Recognition</a>
+    <a href="#education"><span>06</span>Education</a>
+    <a href="#about"><span>07</span>About</a>
+    <a href="#contact"><span>08</span>Contact</a>
+  </nav>
+  <div class="menu-foot">
+    <a class="btn primary btn-sm" href="mailto:samuelwesley.mondal2@mail.dcu.ie"><svg aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+    <a class="btn btn-sm" href="https://www.linkedin.com/in/samuel-wesleymondal" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+    <a class="btn btn-sm" href="cv.html"><svg aria-hidden="true"><use href="#i-doc"/></svg>Web CV</a>
+    <button class="btn btn-sm" type="button" data-theme-toggle><svg aria-hidden="true"><use href="#i-moon"/></svg>Theme</button>
+  </div>
+</dialog>
+
+<!-- ================= LIGHTBOX ================= -->
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <figure><img alt=""><figcaption><span class="lb-cap"></span><span class="lb-count"></span></figcaption></figure>
+  <button class="lb-btn lb-close" type="button" data-lb-close aria-label="Close image viewer"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+  <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label="Previous image"><svg aria-hidden="true"><use href="#i-prev"/></svg></button>
+  <button class="lb-btn lb-next" type="button" data-lb-next aria-label="Next image"><svg aria-hidden="true"><use href="#i-next"/></svg></button>
+</dialog>
+
+<!-- ================= COMMAND PALETTE ================= -->
+<dialog class="palette" id="palette" aria-label="Search and quick actions">
+  <div class="pal-in">
+    <svg aria-hidden="true"><use href="#i-search"/></svg>
+    <input id="pal-input" type="text" role="combobox" aria-expanded="true" aria-controls="pal-list" aria-autocomplete="list" aria-label="Search" placeholder="Search projects, sections, actions…" autocomplete="off" spellcheck="false" autofocus>
+    <kbd class="kbd">Esc</kbd>
+  </div>
+  <ul class="pal-list" id="pal-list" role="listbox" aria-label="Results"></ul>
+  <div class="pal-foot"><span><kbd class="kbd">↑</kbd><kbd class="kbd">↓</kbd>navigate</span><span><kbd class="kbd">Enter</kbd>open</span><span><kbd class="kbd">Esc</kbd>close</span></div>
+</dialog>
+
 </body>
 </html>

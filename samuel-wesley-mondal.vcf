@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Mondal;Samuel Wesley;;;
+FN:Samuel Wesley Mondal
+TITLE:Mechanical Engineer
+ORG:Dublin City University
+EMAIL;TYPE=INTERNET,PREF:samuelwesley.mondal2@mail.dcu.ie
+URL:https://samuelwesleymondal.com
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/samuel-wesleymondal
+ADR;TYPE=HOME:;;;Dublin;;;Ireland
+NOTE:MEng Mechanical & Manufacturing Engineering (Simulation-Driven Design)\, DCU. Open to internships and placements.
+END:VCARD
