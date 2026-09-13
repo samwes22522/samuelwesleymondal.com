@@ -12,8 +12,9 @@
   const $$ = (s, c) => Array.from((c || doc).querySelectorAll(s));
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent);
-  const EMAIL = 'samuelwesley.mondal2@mail.dcu.ie';
-  const LINKEDIN = 'https://www.linkedin.com/in/samuel-wesley-mondal';
+  const EMAIL = 'samwes22522@gmail.com';
+  const EMAIL_COLLEGE = 'samuelwesley.mondal2@mail.dcu.ie';
+  const LINKEDIN = 'https://www.linkedin.com/in/samuel-wesley-mondal/';
   const INSTAGRAM = 'https://www.instagram.com/samwes22522';
 
   /* ---------- helpers ---------- */
@@ -389,7 +390,8 @@
       });
     });
     $$('.role[id]').forEach((r) => add('Experience', 'section', $('h3', r).textContent + ' — ' + $('.org', r).textContent, $('.period', r).textContent, r.textContent, () => { scrollToId(r.id); setTimeout(() => flash(r), reduce ? 0 : 450); }));
-    add('Actions', 'action', 'Copy email address', EMAIL, 'contact mail', () => copy(EMAIL));
+    add('Actions', 'action', 'Copy personal email', EMAIL, 'contact mail gmail', () => copy(EMAIL));
+    add('Actions', 'action', 'Copy college email', EMAIL_COLLEGE, 'contact mail dcu university', () => copy(EMAIL_COLLEGE));
     add('Actions', 'action', 'Write an email', 'mailto', 'contact message hire', () => { location.href = 'mailto:' + EMAIL; });
     add('Actions', 'link', 'Open LinkedIn', 'linkedin.com', 'profile social', () => window.open(LINKEDIN, '_blank', 'noopener'));
     add('Actions', 'link', 'Open Instagram', 'instagram.com', 'profile social photos', () => window.open(INSTAGRAM, '_blank', 'noopener'));
