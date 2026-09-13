@@ -257,9 +257,9 @@ body::after{
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:center;width:100%;}
 .hero-copy{max-width:680px;}
 
-.idcard{display:flex;align-items:center;gap:14px;margin-bottom:26px;}
-.idcard img{width:54px;height:54px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:1px solid var(--line);}
-.idcard-role{font:500 15px/1.2 var(--display);margin:0 0 4px;}
+.idcard{display:flex;align-items:center;gap:18px;margin-bottom:26px;}
+.idcard img{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:1px solid var(--line);}
+.idcard-role{font:500 17px/1.2 var(--display);margin:0 0 4px;}
 .idcard .mono{font-size:10px;margin:0;}
 
 .status{

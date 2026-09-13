@@ -13,7 +13,8 @@
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent);
   const EMAIL = 'samuelwesley.mondal2@mail.dcu.ie';
-  const LINKEDIN = 'https://www.linkedin.com/in/samuel-wesleymondal';
+  const LINKEDIN = 'https://www.linkedin.com/in/samuel-wesley-mondal';
+  const INSTAGRAM = 'https://www.instagram.com/samwes22522';
 
   /* ---------- helpers ---------- */
   const toastEl = $('#toast');
@@ -391,6 +392,7 @@
     add('Actions', 'action', 'Copy email address', EMAIL, 'contact mail', () => copy(EMAIL));
     add('Actions', 'action', 'Write an email', 'mailto', 'contact message hire', () => { location.href = 'mailto:' + EMAIL; });
     add('Actions', 'link', 'Open LinkedIn', 'linkedin.com', 'profile social', () => window.open(LINKEDIN, '_blank', 'noopener'));
+    add('Actions', 'link', 'Open Instagram', 'instagram.com', 'profile social photos', () => window.open(INSTAGRAM, '_blank', 'noopener'));
     add('Actions', 'link', 'Open the web CV', 'cv.html', 'resume print pdf', () => { location.href = 'cv.html'; });
     add('Actions', 'action', 'Save contact card', '.vcf', 'vcard address book download', () => { const a = doc.createElement('a'); a.href = 'samuel-wesley-mondal.vcf'; a.download = ''; doc.body.appendChild(a); a.click(); a.remove(); });
     add('Actions', 'action', 'Toggle light / dark theme', 'Theme', 'dark light mode colour', toggleTheme);
